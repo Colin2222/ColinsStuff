@@ -12,6 +12,7 @@ import com.Robothead4.colinsstuff.items.ItemBase;
 import com.Robothead4.colinsstuff.tileentity.ColinQuarryTileEntity;
 import com.Robothead4.colinsstuff.tools.ColinsStuffItemTier;
 import com.Robothead4.colinsstuff.world.biome.ColinBiome;
+import com.Robothead4.colinsstuff.world.biome.ColinFieldsBiome;
 import com.Robothead4.colinsstuff.world.feature.ColinTreeFeature;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -78,7 +79,7 @@ public class RegistryHandler
     public static final Feature<BaseTreeFeatureConfig> COLIN_TREE = new ColinTreeFeature(BaseTreeFeatureConfig.field_236676_a_);
 
     // Biomes
-    public static final RegistryObject<Biome> COLIN_BIOME = BIOMES.register("colin_biome",() -> new ColinBiome());
+    public static final RegistryObject<Biome> COLIN_BIOME = BIOMES.register("colin_fields_biome",() -> new ColinFieldsBiome());
 
     // Tile Entity types
     //public static final RegistryObject<TileEntityType<ColinQuarry>> COLIN_QUARRY = TILE_ENTITY_TYPES.register("colin_quarry", () -> TileEntityType.Builder.build(ColinQuarry::new, RegistryHandler.COLIN_QUARRY_BLOCK).build(null));
