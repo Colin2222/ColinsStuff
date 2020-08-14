@@ -17,7 +17,7 @@ public class ColinGrass extends GrassBlock {
                         .hardnessAndResistance(1.0F,1.0F)
                         .sound(SoundType.GROUND)
                         .harvestTool(ToolType.SHOVEL)
-                        .harvestLevel(0)
+                        .harvestLevel(1)
                         .setRequiresTool()
                 //.speedFactor(2.0F)
         );
