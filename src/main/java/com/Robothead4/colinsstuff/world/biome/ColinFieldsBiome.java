@@ -34,8 +34,8 @@ public class ColinFieldsBiome extends ColinBiome{
                 0.2F,
                 0.8F,
                 new Color(18, 25, 9).getRGB(),
-                SoundEvents.AMBIENT_CAVE,
-                new ParticleEffectAmbience(ParticleTypes.WARPED_SPORE, 0.025F)
+                SoundEvents.AMBIENT_WARPED_FOREST_LOOP,
+                new ParticleEffectAmbience(ParticleTypes.FALLING_LAVA, 0.025F)
         );
 
     }
