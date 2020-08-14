@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cs:colin_block"
+    }
+  ],
+  "result":
+  {
+    "item": "cs:colin_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cs:block/colin_quarry" },
+    "facing=south": { "model": "cs:block/colin_quarry", "y":  180},
+    "facing=west": { "model": "cs:block/colin_quarry", "y":  270},
+    "facing=east": { "model": "cs:block/colin_quarry", "y":  90}
+  }
+}

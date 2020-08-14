@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cs:colin_ingot"
+    }
+  ],
+  "result":
+  {
+    "item": "cs:colin_nugget",
+    "count": 9
+  }
+}

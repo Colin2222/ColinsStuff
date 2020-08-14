@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "cs:colin_ore"
+  },
+  "result": "cs:colin_ingot",
+  "experience": 0.7,
+  "cookingtime": 60
+}

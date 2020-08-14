@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cs:colin_dust"
+  },
+  "result": "cs:colin_ingot",
+  "experience": 1.0,
+  "cookingtime": 75
+}

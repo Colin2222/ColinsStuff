@@ -1,0 +1,36 @@
+{
+  // Items
+  "item.cs.colin_ingot": "Colin Ingot",
+  "item.cs.colin_dust": "Colin Dust",
+  "item.cs.colin_nugget": "Colin Nugget",
+  "item.cs.colin_coal": "Colin Coal",
+  "item.cs.colin_gem": "Colin Gem",
+
+  // Food
+  "item.cs.colin_soup": "Colin Soup",
+
+  //BlockItems
+  "block.cs.colin_block": "Colin Block",
+  "block.cs.colin_ore": "Colin Ore",
+  "block.cs.colin_planks": "Colin Planks",
+  "block.cs.colin_log": "Colin Log",
+  "block.cs.colin_leaves": "Colin Leaves",
+  "block.cs.colin_sapling": "Colin Sapling",
+  "block.cs.colin_cube": "Colin Cube",
+
+  // Creative tab
+  "itemGroup.colinTab": "Colin's Stuff",
+
+  // Tools
+  "item.cs.colin_sword": "Colin Sword",
+  "item.cs.colin_pickaxe": "Colin Pickaxe",
+  "item.cs.colin_axe": "Colin Axe",
+  "item.cs.colin_shovel": "Colin Shovel",
+  "item.cs.colin_hoe": "Colin Hoe",
+
+  // Armor
+  "item.cs.colin_helmet": "Colin Helmet",
+  "item.cs.colin_chestplate": "Colin Chestplate",
+  "item.cs.colin_leggings": "Colin Leggings",
+  "item.cs.colin_boots": "Colin Boots"
+}

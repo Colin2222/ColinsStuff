@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "III",
+    "IDI",
+    "III"
+  ],
+  "key":
+  {
+    "I":
+    {
+      "item": "cs:colin_ingot"
+    },
+    "D":
+    {
+      "tag": "cs:gems"
+    }
+  },
+  "result":
+  {
+    "item": "cs:colin_block",
+    "count": 1
+  }
+}

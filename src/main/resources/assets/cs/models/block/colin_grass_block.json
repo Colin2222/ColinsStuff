@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "cs:blocks/colin_grass_block_side",
+    "north": "cs:blocks/colin_grass_block_side",
+    "west": "cs:blocks/colin_grass_block_side",
+    "east": "cs:blocks/colin_grass_block_side",
+    "south": "cs:blocks/colin_grass_block_side",
+    "up": "cs:blocks/colin_grass_block_top",
+    "down": "minecraft:block/dirt"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":    { "model": "cs:block/colin_log" },
+    "axis=z":     { "model": "cs:block/colin_log", "x": 90 },
+    "axis=x":     { "model": "cs:block/colin_log", "x": 90, "y": 90 }
+  }
+}

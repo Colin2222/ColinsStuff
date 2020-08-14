@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key":
+  {
+    "N":
+    {
+      "item": "cs:colin_nugget"
+    }
+  },
+  "result":
+  {
+    "item": "cs:colin_ingot",
+    "count": 1
+  }
+}

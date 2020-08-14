@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cs:block/colin_cube" },
+    "facing=south": { "model": "cs:block/colin_cube", "y":  180},
+    "facing=west": { "model": "cs:block/colin_cube", "y":  270},
+    "facing=east": { "model": "cs:block/colin_cube", "y":  90}
+  }
+}
