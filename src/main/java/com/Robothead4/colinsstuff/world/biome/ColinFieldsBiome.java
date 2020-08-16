@@ -33,7 +33,7 @@ public class ColinFieldsBiome extends ColinBiome{
                 0.1F,
                 0.2F,
                 0.8F,
-                new Color(18, 25, 9).getRGB(),
+                new Color(0, 0, 0).getRGB(),
                 SoundEvents.AMBIENT_WARPED_FOREST_LOOP,
                 new ParticleEffectAmbience(ParticleTypes.FALLING_LAVA, 0.025F)
         );
@@ -49,5 +49,10 @@ public class ColinFieldsBiome extends ColinBiome{
     @OnlyIn(Dist.CLIENT)
     public int getGrassColor(double posX, double posZ) {
         return new Color(255, 102, 0).getRGB();
+    }
+
+    @Override
+    public int getSkyColor() {
+        return new Color(0,0,0).getRGB();
     }
 }
