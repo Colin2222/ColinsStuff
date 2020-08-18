@@ -5,11 +5,13 @@ import com.Robothead4.colinsstuff.armor.ColinsStuffArmorMaterial;
 import com.Robothead4.colinsstuff.blockitems.BlockItemBase;
 import com.Robothead4.colinsstuff.blocks.*;
 import com.Robothead4.colinsstuff.blocks.trees.ColinTree;
+import com.Robothead4.colinsstuff.init.ModContainerTypes;
 import com.Robothead4.colinsstuff.items.ColinFuel;
 import com.Robothead4.colinsstuff.items.ColinGem;
 import com.Robothead4.colinsstuff.items.ColinSoup;
 import com.Robothead4.colinsstuff.items.ItemBase;
 import com.Robothead4.colinsstuff.tileentity.ColinQuarryTileEntity;
+import com.Robothead4.colinsstuff.tileentity.ModTileEntityTypes;
 import com.Robothead4.colinsstuff.tools.ColinsStuffItemTier;
 import com.Robothead4.colinsstuff.world.biome.ColinBiome;
 import com.Robothead4.colinsstuff.world.biome.ColinFieldsBiome;
@@ -36,8 +38,7 @@ public class RegistryHandler
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ColinsStuff.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ColinsStuff.MOD_ID);
-    public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, ColinsStuff.MOD_ID);
-    public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, ColinsStuff.MOD_ID);
+    //public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, ColinsStuff.MOD_ID);
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES,ColinsStuff.MOD_ID);
 
     //will fill up with blocks,entities,other stuff
@@ -45,9 +46,9 @@ public class RegistryHandler
     {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        ModContainerTypes.CONTAINER_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     // can make separate classes to initialize different groups to do:
@@ -74,6 +75,7 @@ public class RegistryHandler
     public static final RegistryObject<Block> COLIN_CUBE = BLOCKS.register("colin_cube", ColinCube::new);
     public static final RegistryObject<Block> COLIN_QUARRY_BLOCK = BLOCKS.register("colin_quarry", ColinQuarryBlock::new);
     public static final RegistryObject<Block> COLIN_GRASS_BLOCK = BLOCKS.register("colin_grass_block", ColinGrass::new);
+    public static final RegistryObject<Block> COLIN_CHEST_BLOCK = BLOCKS.register("colin_chest",() -> new ColinChestBlock());
 
     // Trees
     public static final Feature<BaseTreeFeatureConfig> COLIN_TREE = new ColinTreeFeature(BaseTreeFeatureConfig.field_236676_a_);
@@ -81,10 +83,6 @@ public class RegistryHandler
     // Biomes
     public static final RegistryObject<Biome> COLIN_BIOME = BIOMES.register("colin_fields_biome",() -> new ColinFieldsBiome());
 
-    // Tile Entity types
-    //public static final RegistryObject<TileEntityType<ColinQuarry>> COLIN_QUARRY = TILE_ENTITY_TYPES.register("colin_quarry", () -> TileEntityType.Builder.build(ColinQuarry::new, RegistryHandler.COLIN_QUARRY_BLOCK).build(null));
-    public static final RegistryObject<TileEntityType<ColinQuarryTileEntity>> COLIN_QUARRY = TILE_ENTITY_TYPES.register("colin_quarry",
-            () -> TileEntityType.Builder.create(ColinQuarryTileEntity::new, RegistryHandler.COLIN_QUARRY_BLOCK.get()).build(null));
 
     //BlockItems
     public static final RegistryObject<Item> COLIN_BLOCK_ITEM = ITEMS.register("colin_block", () -> new BlockItemBase(COLIN_BLOCK.get()));
@@ -96,6 +94,7 @@ public class RegistryHandler
     public static final RegistryObject<Item> COLIN_CUBE_ITEM = ITEMS.register("colin_cube", ()-> new BlockItemBase(COLIN_CUBE.get()));
     public static final RegistryObject<Item> COLIN_QUARRY_ITEM = ITEMS.register("colin_quarry", ()-> new BlockItemBase(COLIN_QUARRY_BLOCK.get()));
     public static final RegistryObject<Item> COLIN_GRASS_BLOCK_ITEM = ITEMS.register("colin_grass_block", () -> new BlockItemBase(COLIN_GRASS_BLOCK.get()));
+    public static final RegistryObject<Item> COLIN_CHEST_ITEM = ITEMS.register("colin_chest", () -> new BlockItemBase(COLIN_CHEST_BLOCK.get()));
 
     //Tools
     // material, base attack damage, attack speed change from 4, item group (creative tab)

@@ -18,6 +18,8 @@
   "block.cs.colin_sapling": "Colin Sapling",
   "block.cs.colin_cube": "Colin Cube",
 
+  "container.colin_chest": "Colin Chest",
+
   // Creative tab
   "itemGroup.colinTab": "Colin's Stuff",
 

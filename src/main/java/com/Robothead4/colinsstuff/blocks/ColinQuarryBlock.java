@@ -1,5 +1,6 @@
 package com.Robothead4.colinsstuff.blocks;
 
+import com.Robothead4.colinsstuff.tileentity.ModTileEntityTypes;
 import com.Robothead4.colinsstuff.util.RegistryHandler;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -45,7 +46,7 @@ public class ColinQuarryBlock extends Block {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return RegistryHandler.COLIN_QUARRY.get().create();
+        return ModTileEntityTypes.COLIN_QUARRY.get().create();
     }
 
 }

@@ -26,8 +26,6 @@ public class ColinsStuff
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        //RegistryHandler.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
-
         RegistryHandler.init();
 
         // Register ourselves for server and other game events we are interested in

@@ -24,7 +24,7 @@ public class ColinQuarryTileEntity extends TileEntity implements ITickableTileEn
     }
 
     public ColinQuarryTileEntity(){
-        this(RegistryHandler.COLIN_QUARRY.get());
+        this(ModTileEntityTypes.COLIN_QUARRY.get());
     }
 
 
