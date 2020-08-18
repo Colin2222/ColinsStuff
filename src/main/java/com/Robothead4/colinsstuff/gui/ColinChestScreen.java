@@ -10,7 +10,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.GuiContainerEvent;
 
 @OnlyIn(Dist.CLIENT)
 public class ColinChestScreen extends ContainerScreen<ColinChestContainer> {
