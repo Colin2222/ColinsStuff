@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
+import net.minecraft.util.SoundEvents;
 
 import java.util.Objects;
 
@@ -93,5 +94,19 @@ public class ColinChestContainer extends Container {
             }
         }
         return itemStack;
+    }
+
+    @Override
+    public void onContainerClosed(PlayerEntity playerIn) {
+        this.canInteractWithCallable.consume((world,pos) -> {
+            TileEntity tile = world.getTileEntity(pos);
+            ColinChestTileEntity colinChestTileEntity = (ColinChestTileEntity)tile;
+            if(!playerIn.isSpectator()){
+                colinChestTileEntity.numPlayersUsing--;
+            }
+            if(colinChestTileEntity.numPlayersUsing <= 0){
+                colinChestTileEntity.playSound(SoundEvents.BLOCK_CHEST_CLOSE);
+            }
+        });
     }
 }

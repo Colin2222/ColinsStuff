@@ -12,6 +12,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
@@ -39,7 +40,9 @@ public class ColinChestBlock extends Block {
         if(!worldIn.isRemote){
             TileEntity tile = worldIn.getTileEntity(pos);
             if(tile instanceof ColinChestTileEntity){
+                ColinChestTileEntity colinChestTileEntity = (ColinChestTileEntity)tile;
                 NetworkHooks.openGui((ServerPlayerEntity)player, (ColinChestTileEntity)tile,pos);
+                colinChestTileEntity.playSound(SoundEvents.BLOCK_CHEST_OPEN);
                 return ActionResultType.SUCCESS;
             }
         }

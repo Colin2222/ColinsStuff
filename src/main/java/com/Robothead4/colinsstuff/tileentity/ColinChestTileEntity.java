@@ -31,7 +31,7 @@ import javax.annotation.Nonnull;
 
 public class ColinChestTileEntity extends LockableLootTileEntity {
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(36, ItemStack.EMPTY);
-    protected int numPlayersUsing;
+    public int numPlayersUsing;
     private IItemHandlerModifiable items = createHandler();
     private LazyOptional<IItemHandlerModifiable> itemHandler = LazyOptional.of(() -> items);
 
@@ -87,7 +87,7 @@ public class ColinChestTileEntity extends LockableLootTileEntity {
         }
     }
 
-    private void playSound(SoundEvent sound){
+    public void playSound(SoundEvent sound){
         double dx = (double)this.pos.getX() + 0.5D;
         double dy = (double)this.pos.getY() + 0.5D;
         double dz = (double)this.pos.getZ() + 0.5D;
