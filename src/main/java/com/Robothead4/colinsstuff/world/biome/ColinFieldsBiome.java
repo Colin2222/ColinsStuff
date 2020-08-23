@@ -8,11 +8,11 @@ import net.minecraft.client.audio.BackgroundMusicSelector;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeAmbience;
-import net.minecraft.world.biome.MoodSoundAmbience;
-import net.minecraft.world.biome.ParticleEffectAmbience;
+import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.DefaultSurfaceBuilder;
@@ -43,6 +43,8 @@ public class ColinFieldsBiome extends ColinBiome{
     @Override
     public void addFeatures() {
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, RegistryHandler.COLIN_TREE.withConfiguration(ColinTree.COLIN_TREE_CONFIG).withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(3000))));
+        DefaultBiomeFeatures.addCarvers(this);
+        this.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.COLIN_ORE.get().getDefaultState(), 17)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 128))));
     }
 
     @Override

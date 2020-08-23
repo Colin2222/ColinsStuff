@@ -19,6 +19,7 @@ public class ClientEventBusSubscriber
     {
         RenderTypeLookup.setRenderLayer(RegistryHandler.COLIN_LEAVES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.COLIN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.COLIN_CROP.get(), RenderType.getCutout());
         ScreenManager.registerFactory(ModContainerTypes.COLIN_CHEST.get(), ColinChestScreen::new);
     }
 }

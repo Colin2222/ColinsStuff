@@ -1,9 +1,12 @@
 package com.Robothead4.colinsstuff;
 
 import com.Robothead4.colinsstuff.util.RegistryHandler;
+import com.Robothead4.colinsstuff.world.biome.ModBiomes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -34,8 +37,12 @@ public class ColinsStuff
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
+        DeferredWorkQueue.runLater(() ->{
+            ModBiomes.addBiomeTypes();
+            ModBiomes.registerBiomesToDictionary();
+        });
     }
+
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 

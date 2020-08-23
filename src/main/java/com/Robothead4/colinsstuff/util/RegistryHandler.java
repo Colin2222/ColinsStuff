@@ -15,6 +15,7 @@ import com.Robothead4.colinsstuff.tileentity.ModTileEntityTypes;
 import com.Robothead4.colinsstuff.tools.ColinsStuffItemTier;
 import com.Robothead4.colinsstuff.world.biome.ColinBiome;
 import com.Robothead4.colinsstuff.world.biome.ColinFieldsBiome;
+import com.Robothead4.colinsstuff.world.biome.ModBiomes;
 import com.Robothead4.colinsstuff.world.feature.ColinTreeFeature;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -27,6 +28,8 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,7 +42,6 @@ public class RegistryHandler
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ColinsStuff.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ColinsStuff.MOD_ID);
     //public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, ColinsStuff.MOD_ID);
-    public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES,ColinsStuff.MOD_ID);
 
     //will fill up with blocks,entities,other stuff
     public static void init()
@@ -47,7 +49,7 @@ public class RegistryHandler
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModBiomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContainerTypes.CONTAINER_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
@@ -59,6 +61,7 @@ public class RegistryHandler
     public static final RegistryObject<Item> COLIN_NUGGET = ITEMS.register("colin_nugget", ItemBase::new);
     public static final RegistryObject<Item> COLIN_COAL = ITEMS.register("colin_coal", ColinFuel::new);
     public static final RegistryObject<Item> COLIN_GEM = ITEMS.register("colin_gem", ColinGem::new);
+    public static final RegistryObject<Item> COLIN_GRAIN = ITEMS.register("colin_grain", ItemBase::new);
 
     //Food
     public static final RegistryObject<ColinSoup> COLIN_SOUP = ITEMS.register("colin_soup", ColinSoup::new);
@@ -80,8 +83,9 @@ public class RegistryHandler
     // Trees
     public static final Feature<BaseTreeFeatureConfig> COLIN_TREE = new ColinTreeFeature(BaseTreeFeatureConfig.field_236676_a_);
 
-    // Biomes
-    public static final RegistryObject<Biome> COLIN_BIOME = BIOMES.register("colin_fields_biome",() -> new ColinFieldsBiome());
+    // Crops
+    public static final RegistryObject<Block> COLIN_CROP = BLOCKS.register("colin_crop", () -> new ColinCrop());
+    public static final RegistryObject<Item> COLIN_SEED = ITEMS.register("colin_seed", () -> new BlockItemBase(COLIN_CROP.get()));
 
 
     //BlockItems
