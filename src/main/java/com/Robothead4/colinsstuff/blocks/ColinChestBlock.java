@@ -6,6 +6,7 @@ import com.Robothead4.colinsstuff.util.RegistryHandler;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.MinecraftGame;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.InventoryHelper;
@@ -15,6 +16,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
@@ -43,10 +45,10 @@ public class ColinChestBlock extends Block {
                 ColinChestTileEntity colinChestTileEntity = (ColinChestTileEntity)tile;
                 NetworkHooks.openGui((ServerPlayerEntity)player, (ColinChestTileEntity)tile,pos);
                 colinChestTileEntity.playSound(SoundEvents.BLOCK_CHEST_OPEN);
-                return ActionResultType.SUCCESS;
+                player.sendMessage(ITextComponent.func_241827_a_("Chest opened"),player.getUniqueID());
             }
         }
-        return ActionResultType.FAIL;
+        return ActionResultType.SUCCESS;
     }
 
     @Override

@@ -54,10 +54,10 @@ public class ColinQuarryTileEntity extends TileEntity implements ITickableTileEn
     // length of Block[] must be x * z
     private void execute(){
         int index = 0;
-        Block[] blocksRemoved = new Block[625];
-        for(int x = 0; x < 25; x++)
+        Block[] blocksRemoved = new Block[9];
+        for(int x = 0; x < 3; x++)
         {
-            for(int z = 0; z < 25; z++)
+            for(int z = 0; z < 3; z++)
             {
                 BlockPos posToBreak = new BlockPos(this.x + x,this.y,this.z + z);
                 blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
