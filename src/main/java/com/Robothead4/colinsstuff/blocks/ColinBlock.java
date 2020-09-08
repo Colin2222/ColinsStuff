@@ -28,7 +28,7 @@ public class ColinBlock extends Block
         // harvestTool sets what kind of tool needed to break
         super(Block.Properties.create(Material.IRON)
                 .hardnessAndResistance(5.0F,6.0F)
-                .sound(SoundType.GLASS)
+                .sound(SoundType.METAL)
                 .harvestTool(ToolType.PICKAXE)
                 .harvestLevel(3)
                 .setRequiresTool()
