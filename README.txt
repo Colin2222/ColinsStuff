@@ -5,15 +5,9 @@ A collection of modded minecraft elements, including the following:
 -food item
 -crop
 -biome
--
-
-
-
-
-
-
-
-
+-tree and sapling
+-armor set
+-tool set
 
 
 
